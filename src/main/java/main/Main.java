@@ -1,32 +1,29 @@
 package main;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import sn.isi.dao.ChefdevillageImpl;
-import sn.isi.dao.ClientImpl;
 import sn.isi.dao.IChefdevillage;
-import sn.isi.dao.IClient;
 import sn.isi.entities.Chefdevillage;
-import sn.isi.entities.Client;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//			IClient clientDao =new ClientImpl();
-//			Client client = new Client();
-//			client.setNom(null);
-//			
-//			int result = clientDao.add(client);
-		
+
 		IChefdevillage chefVilDao = new  ChefdevillageImpl();
 		Chefdevillage chef = new Chefdevillage();
 		chef.setNom("Diop");
 		chef.setPrenom("Limamou");
-		chef.setTelephone(77192);
-		
+		chef.setTelephone("771926");
+		chef.setFonction("Informaticien");
+		System.out.println(chef.toString());
 		int result= chefVilDao.add(chef);
-		System.out.println(result);
+		List<Chefdevillage> listch =new ArrayList<Chefdevillage>();
+		listch= chefVilDao.list(chef);
+		System.out.println(listch);
 		
-			
 	}
 
 }

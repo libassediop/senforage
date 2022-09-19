@@ -1,7 +1,5 @@
 package sn.isi.entities;
 import java.io.Serializable;
-
-import javax.persistence.CollectionTable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,11 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "personne")
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Personne implements Serializable  {
 	
@@ -23,15 +19,14 @@ public abstract class Personne implements Serializable  {
 	private static final long serialVersionUID = 1L;
 	
 		@Id
-	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    @CollectionTable(name = "id")
+	    @GeneratedValue(strategy = GenerationType.AUTO)
 	    private int id;
 	    @Column(name = "nom")
 	    private String nom;
 	    @Column(name = "prenom")
 	    private String prenom;
-	    @Column(name = "telephone")
-	    private long telephone;
+	    @Column(name = "telephone",unique = true,length = 15)
+	    private String telephone;
 	    
 	    
 	    
@@ -53,12 +48,16 @@ public abstract class Personne implements Serializable  {
 		public void setPrenom(String prenom) {
 			this.prenom = prenom;
 		}
-		public long getTelephone() {
+		public String getTelephone() {
 			return telephone;
 		}
-		public void setTelephone(long telephone) {
+		public void setTelephone(String telephone) {
 			this.telephone = telephone;
 		}
+		public Personne() {
+			super();
+		}
+		
 	    
 	    
 	    

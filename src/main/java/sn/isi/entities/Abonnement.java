@@ -4,13 +4,14 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+@Entity
 public class Abonnement implements Serializable   {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -19,8 +20,8 @@ public class Abonnement implements Serializable   {
 	@Column(length = 500, nullable = false)
 	private String descriptipn;
 	private Date date;
-//	@ManyToOne
-//	private Client client= new Client();
+	@ManyToOne
+	private Client client= new Client();
 	@ManyToOne
 	private Compteur compteur= new Compteur();
 	public int getId() {

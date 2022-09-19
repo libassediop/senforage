@@ -16,15 +16,14 @@ public class Client extends Personne {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
 	
 	@Column(name = "adresse")
     private String adresse;
-//	@ManyToOne
-//	private Village village= new Village();
-//	@OneToMany(mappedBy ="client" )
-//	private List<Abonnement> abonnements = new ArrayList<Abonnement>();
-//	
+	@ManyToOne
+	private Village village= new Village();
+	@OneToMany(mappedBy ="client" )
+	private List<Abonnement> abonnement = new ArrayList<Abonnement>();
+	
 	
 
 	public String getAdresse() {
@@ -44,12 +43,18 @@ public class Client extends Personne {
 	}
 
 	public List<Abonnement> getAbonnements() {
-		return abonnements;
+		return abonnement;
 	}
 
 	public void setAbonnements(List<Abonnement> abonnements) {
-		this.abonnements = abonnements;
+		this.abonnement = abonnements;
 	}
+
+	public Client() {
+		super();
+	}
+	
+	
 
 
    

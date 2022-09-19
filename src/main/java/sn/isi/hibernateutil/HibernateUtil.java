@@ -13,7 +13,9 @@ import sn.isi.entities.Chefdevillage;
 import sn.isi.entities.Client;
 import sn.isi.entities.Compteur;
 import sn.isi.entities.Facture;
+import sn.isi.entities.Personne;
 import sn.isi.entities.Reglement;
+import sn.isi.entities.Role;
 import sn.isi.entities.Utilisateur;
 import sn.isi.entities.Village;
 
@@ -50,6 +52,8 @@ public class HibernateUtil {
 				configuration.addAnnotatedClass(Reglement.class);
 				configuration.addAnnotatedClass(Village.class);
 				configuration.addAnnotatedClass(Compteur.class);
+				configuration.addAnnotatedClass(Role.class);
+				configuration.addAnnotatedClass(Personne.class);
 				
 				
 				ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()

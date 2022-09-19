@@ -15,7 +15,6 @@ public class RepositoryImpl <T> implements Repository<T> {
 	public RepositoryImpl () {
 		session = HibernateUtil.getSessionFactory().openSession();
 	}
-	@Override
 	public int add(T t) {
 		int result=1;
 		transaction = session.beginTransaction();
@@ -25,17 +24,14 @@ public class RepositoryImpl <T> implements Repository<T> {
 		return result;
 	}
 
-	@Override
 	public int delete(int id,T t) {
 		int result=1;
-		
 		transaction = session.beginTransaction();
 		session.delete(session.get(t.getClass(), id));
 		transaction.commit();
 		return result;
 	}
 
-	@Override
 	public int update(T t) {
 		int result=1;
 		transaction = session.beginTransaction();
@@ -46,7 +42,6 @@ public class RepositoryImpl <T> implements Repository<T> {
 	
 	
     @SuppressWarnings("unchecked")
-	@Override
 	public List<T> list(T t) {
 		
        return (List<T>) session.createCriteria(t.getClass()).list();
@@ -55,7 +50,6 @@ public class RepositoryImpl <T> implements Repository<T> {
 	}
 
     @SuppressWarnings("unchecked")
-	@Override
 	public T get (int id,T t) {
 		return (T) session.get(t.getClass(), id);
        
