@@ -1,5 +1,7 @@
 package sn.isi.dao;
 
-public interface IAbonnement {
+import sn.isi.entities.Abonnement;
+
+public interface IAbonnement extends Repository<Abonnement> {
 
 }

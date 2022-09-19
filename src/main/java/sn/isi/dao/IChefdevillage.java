@@ -1,5 +1,7 @@
 package sn.isi.dao;
 
-public interface IChefdevillage {
+import sn.isi.entities.Chefdevillage;
+
+public interface IChefdevillage extends Repository<Chefdevillage> {
 
 }

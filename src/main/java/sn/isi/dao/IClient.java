@@ -1,5 +1,7 @@
 package sn.isi.dao;
 
-public interface IClient {
+import sn.isi.entities.Client;
 
+public interface IClient extends Repository<Client> {
+	
 }

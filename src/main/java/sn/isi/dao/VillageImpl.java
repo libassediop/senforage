@@ -1,5 +1,7 @@
 package sn.isi.dao;
 
-public class VillageImpl {
+import sn.isi.entities.Village;
+
+public class VillageImpl extends RepositoryImpl<Village> implements IVillage {
 
 }

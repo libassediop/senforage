@@ -1,5 +1,7 @@
 package sn.isi.dao;
 
-public interface IVillage {
+import sn.isi.entities.Village;
+
+public interface IVillage extends Repository<Village>{
 
 }

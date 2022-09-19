@@ -1,5 +1,7 @@
 package sn.isi.dao;
 
-public interface IFacture {
+import sn.isi.entities.Facture;
+
+public interface IFacture extends Repository<Facture>{
 
 }

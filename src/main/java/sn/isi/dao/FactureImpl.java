@@ -1,5 +1,7 @@
 package sn.isi.dao;
 
-public class FactureImpl {
+import sn.isi.entities.Facture;
+
+public class FactureImpl extends RepositoryImpl<Facture> implements IFacture {
 
 }

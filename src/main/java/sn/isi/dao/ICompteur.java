@@ -1,5 +1,7 @@
 package sn.isi.dao;
 
-public interface ICompteur {
+import sn.isi.entities.Compteur;
+
+public interface ICompteur extends Repository<Compteur> {
 
 }

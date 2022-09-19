@@ -1,5 +1,7 @@
 package sn.isi.dao;
 
-public class RoleImpl {
+import sn.isi.entities.Role;
+
+public class RoleImpl extends RepositoryImpl<Role> implements IRole  {
 
 }

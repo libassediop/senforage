@@ -1,5 +1,7 @@
 package sn.isi.dao;
 
-public class AbonnementImpl {
+import sn.isi.entities.Abonnement;
+
+public class AbonnementImpl extends RepositoryImpl<Abonnement> implements IAbonnement  {
 
 }

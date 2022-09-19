@@ -1,5 +1,7 @@
 package sn.isi.dao;
 
-public class ReglementImpl {
+import sn.isi.entities.Reglement;
+
+public class ReglementImpl extends RepositoryImpl<Reglement> implements IReglement {
 
 }

@@ -1,5 +1,7 @@
 package sn.isi.dao;
 
-public class UtilisateurImpl {
+import sn.isi.entities.Utilisateur;
+
+public class UtilisateurImpl extends RepositoryImpl<Utilisateur> implements IUtilisateur {
 
 }
