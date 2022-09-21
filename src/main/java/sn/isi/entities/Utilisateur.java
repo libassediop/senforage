@@ -15,7 +15,6 @@ public class Utilisateur extends Personne {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
 	@Column(length = 100, nullable = false, unique = true)
 	private String email;
 	@Column(length = 150, nullable = false)

@@ -42,12 +42,12 @@ public class Facture implements Serializable  {
 		this.prix_unitaire = prix_unitaire;
 	}
 	public double getMontant() {
-		return montant;
+		return getCompteur().getIndex() * prix_unitaire;
 	}
 	public void setMontant(double montant) {
 		this.montant = montant;
 	}
-	public boolean isStatut() {
+	public boolean getStatut() {
 		return statut;
 	}
 	public void setStatut(boolean statut) {
@@ -77,6 +77,7 @@ public class Facture implements Serializable  {
 	public void setReglements(List<Reglement> reglements) {
 		this.reglements = reglements;
 	}
+	
 	
 	
 	

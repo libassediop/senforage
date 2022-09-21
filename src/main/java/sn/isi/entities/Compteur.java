@@ -19,14 +19,14 @@ public class Compteur  implements Serializable   {
 	private int id;
 	@Column(length = 100, nullable = false)
 	private String numero;
-	@Column(length = 2)
 	private int etat;
-	@Column(length = 2)
+	@Column(name = "indexo")
 	private int index;
 	@OneToMany(mappedBy ="compteur" )
 	private List<Abonnement> abonnements = new ArrayList<Abonnement>();
 	@OneToMany(mappedBy ="compteur" )
 	private List<Facture> factures = new ArrayList<Facture>();
+	
 	public int getId() {
 		return id;
 	}
